@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-a = "Diego"
-b = "Mariano"
+minha_string = "O rato roeu a roupa do rei de Roma"
 
-concatenar = a + " " + b
-
-print(concatenar[0:4])
+minha_string = minha_string.replace("o rei", "a rainha")
+print(minha_string)
