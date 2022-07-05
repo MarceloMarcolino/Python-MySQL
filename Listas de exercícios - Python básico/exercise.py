@@ -5,6 +5,6 @@ idade = 23
 
 # Verifique se usuario é maior de idade ou menor de idade
 if idade >= 18:
-	print("Maior de idade")
+	print("maior de idade")
 else:
-	print("Menor de idade")
+	print("menor de idade")
