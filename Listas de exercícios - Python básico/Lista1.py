@@ -42,5 +42,25 @@ if raiz_delta >= 0:
 		print("As raízes são", x1, "e", x2)
 
 # Exercício 4
+numerica = [105, 864, 431]
+print(sorted(numerica))
 
 # Exercício 5
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+sinal = input("Digite um sinal: ")
+
+if sinal == "+":
+	operacao = num1 + num2
+	print("O resultado da soma é",operacao)
+elif sinal == "-":
+	operacao = num1 - num2
+	print("O resultado da subtração é",operacao)
+elif sinal == "/":
+	operacao = num1 / num2
+	print("O resultado da divisão é",operacao)
+elif sinal == "*" or sinal == "X" or sinal == "x":
+	operacao = num1 * num2
+	print("O resultado da multiplicação é",operacao)
+else:
+	print("Insira um sinal válido. Eles são '+,-,/,* ou X'.")
