@@ -42,25 +42,55 @@ if raiz_delta >= 0:
 		print("As raízes são", x1, "e", x2)
 
 # Exercício 4
-numerica = [105, 864, 431]
-print(sorted(numerica))
+numerica = [500,2,3,9,23,70,3,2,1]
+
+#select sort
+
+for i in range(len(numerica)):
+
+	menor = i
+
+	for j in range(i+1,len(numerica)):
+
+		if numerica[j] < numerica[menor]:
+			menor = j
+
+	if numerica[i] != numerica[menor]:
+		aux = numerica[i]
+		numerica[i] = numerica[menor]
+		numerica[menor] = aux
+
+print(numerica)
+
 
 # Exercício 5
 num1 = int(input("Digite o primeiro número: "))
-num2 = int(input("Digite o segundo número: "))
 sinal = input("Digite um sinal: ")
+num2 = int(input("Digite o segundo número: "))
 
+# soma +
 if sinal == "+":
 	operacao = num1 + num2
 	print("O resultado da soma é",operacao)
+# subtração -
 elif sinal == "-":
 	operacao = num1 - num2
 	print("O resultado da subtração é",operacao)
+# divisão /
 elif sinal == "/":
 	operacao = num1 / num2
 	print("O resultado da divisão é",operacao)
+# multiplicação *
 elif sinal == "*" or sinal == "X" or sinal == "x":
 	operacao = num1 * num2
 	print("O resultado da multiplicação é",operacao)
+# modulo %
+elif sinal == "%":
+	operacao = num1 % num2
+	print("O resultado do módulo é",operacao)
+# modulo %
+elif sinal == "**":
+	operacao = num1 ** num2
+	print("O resultado da exponenciação é",operacao)
 else:
-	print("Insira um sinal válido. Eles são '+,-,/,* ou X'.")
+	print("Insira um sinal válido. Eles são '+,-,/,* ou X,%,**'.")
