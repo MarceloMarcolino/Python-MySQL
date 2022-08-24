@@ -1,5 +1,9 @@
+'''
 entrada = open("16s_bacteria.fasta").read()
-saida = open("bacteria.html","w")
+saida = open("16s_bacteria_aula.html","w")
+'''
+entrada = open("18s_humano.fasta").read()
+saida = open("18s_humano_aula.html","w")
 
 cont = {}
 
@@ -21,7 +25,7 @@ saida.write("<div>")
 i = 1
 for k in cont:
 	transparencia = cont[k]/max(cont.values())
-	saida.write("<div style='width:100px; border:1px solid #111; height:100px; float:left; background-color:rgba(0, 0, 255, "+str(transparencia)+"')></div>")
+	saida.write("<div style='width:100px; border:1px solid #111; color:#fff; height:100px; float:left; background-color:rgba(0, 0, 0, "+str(transparencia)+"')>"+k+"</div>")
 
 	if i%4 == 0:
 		saida.write("<div style='clear:both'></div>")
